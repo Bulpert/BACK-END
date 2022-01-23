@@ -1,0 +1,1 @@
+Para habilitar a tag curta do php, vá no xamp > apache -> config > php.ini, abrirá um bloco de notas, localize o seguinte texto, 'short_open_tag' e ative-a, trocando o 'off' por 'On'
