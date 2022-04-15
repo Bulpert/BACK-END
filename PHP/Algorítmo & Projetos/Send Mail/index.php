@@ -24,7 +24,7 @@
 						<form action="processa_envio.php" method="post">
 							<div class="form-group">
 								<label for="para">Para</label>
-								<input name="para" type="text" class="form-control" id="para" placeholder="joao@dominio.com.br">
+								<input name="para" type="text" class="form-control" id="para" placeholder="teste@dominio.com.br">
 							</div>
 
 							<div class="form-group">

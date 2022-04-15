@@ -41,7 +41,7 @@
 	$mensagem->__set('assunto', $_POST['assunto']);
 	$mensagem->__set('mensagem', $_POST['mensagem']);
 
-	//print_r($mensagem);
+	
 
 	if(!$mensagem->mensagemValida()) {
 		echo 'Mensagem não é válida';
@@ -64,7 +64,7 @@
 			$mail->Username   = 'bulplog@gmail.com';                     //SMTP username
 			
 			// Aqui você incluirá sua senha (remetente)
-			$mail->Password   = '';                               //SMTP password
+			$mail->Password   = 'ra02xbo0';                               //SMTP password
 			$mail->SMTPSecure = 'tls';         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
 			$mail->Port       = 587;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
@@ -82,7 +82,18 @@
 			//Content
 			$mail->isHTML(true);                                  //Set email format to HTML
 			$mail->Subject = $mensagem->__get('assunto');
-			$mail->Body    =$mensagem->__get('mensagem');
+		
+		
+			// Aqui é onde podemos manipular o conteúdo que vai para o e-mail
+			$mail->Body    = $mensagem->__get('mensagem');
+
+    
+				
+				
+				
+				
+				
+			
 			$mail->AltBody = 'Oi. Eu sou o conteúdo do e-mail';
 
 			$mail->send();
